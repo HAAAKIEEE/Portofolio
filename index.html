@@ -15,14 +15,52 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg .bg-light">
+      <div class="container">
+        <a class="navbar-brand fs-3 fw-bold" href="#">Baihaqi</a>
+        <button
+          class="navbar-toggler "
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ms-auto">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="#">Work</a>
+            <a class="nav-link" href="#">Contact</a>
+          </div>
+        </div>
+      </div>
+    </nav>
 
-
-
-
-
-
-
+<!-- hero -->
+<section id="home" class="home container">
+    <div class="row d-flex align-items-center">
+        <div class="col-8">
+            <h4 class="fw-semibold"> Hi My Name is</h4>
+            <h1 class="fw-bold">Baihaqi</h1>
+            <p>I'm Sofware Enginer Based In Indonesia.</p>
+            <a class="btn" href="images/potrait.png" download="">Resume</a>
+        </div>
+        <div class="col-4">
+            <img src="images/aku.png" alt="">
+        </div>
+    </div>
+    <div class="arrow w-100 d-flex align-items-center flex-column mt-5">
+        <a class="text-decoration-none text-dark" href="#about">More Info</a>
+        <img id="arrow" src="images/arrow.svg" alt="">
+    </div>
     
+</section>
+
     <!-- Jquery CDN -->
     <script
       src="https://code.jquery.com/jquery-3.7.1.min.js"
