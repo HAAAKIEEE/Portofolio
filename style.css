@@ -120,6 +120,41 @@ section::before {
 #work-3:hover::after{
     content: 'UI/UX Design';
 }
+.contact{
+    padding-bottom: 128px;
+}
+
+.contact::before{
+    content: 'Contact';
+}
+
+.contact-form{
+    border: 1px solid black;
+    padding: 64px 34px;
+}
+
+.form-label{
+    font-weight: 700;
+}
+.icon{
+    color: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: black;
+
+}
+
+
+.icon:hover{
+    color: black;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: white;
+    
+
+}
 
 @keyframes upDown {
     0% {
