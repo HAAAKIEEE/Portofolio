@@ -1,44 +1,136 @@
-section{
-padding: 128px;
+section {
+    padding-top: 128px;
+    position: relative;
 }
 
-.navbar{
+section::before {
+    z-index: -1;
+    content: '';
+    font-size: 72px;
+    color: gray;
+    opacity: 0.25;
+    position: absolute;
+    font-weight: 700;
+    top: 20px;
+    left: -30px;
+}
+
+.btn.button {
+    border: 3px solid black;
+    border-radius: 5px;
+}
+
+.btn.button:hover, .btn.button.active {
+    border: 3px solid black;
+    background-color: black;
+    color: white;
+}
+
+.navbar {
     background-color: white;
-    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.16);
+    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.25);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
 }
 
-.home h1{
+.home h1 {
     font-size: 72px;
 }
 
-.home h3{
-    font-size: 44px;
-}
-.btn{
-    border: 1px solid black;
-}
-.btn:hover{
-    border: 1px solid black;
-    background-color: black;
-    color: white;
+.home h3 {
+    font-size: 48px;
 }
 
 .home .arrow img{
     width: 60px;
 }
-#arrow{
-    animation: 1s upDown infinite;
+
+#arrow {
+    animation: 2s upDown infinite;
 }
 
-@keyframes upDown{
-    0%{
+.about::before {
+    content: 'About';
+}
+
+.about-exp-item {
+    margin-top: 32px;
+}
+
+.about-exp-item-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-exp-item-detail {
+    display: none;
+}
+
+.work::before{
+    content: 'Work';
+}
+
+.work-img{
+    display: grid;
+    grid-template-columns: 2,1fr;
+    grid-template-areas: "work-1 work-2" "work-3 work-3";
+    gap: 16px;
+}
+.work-img img{
+    width: 100%;
+}
+.work-img-item{
+    position: relative;
+}
+.work-img-item:hover:after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 24px;
+}
+
+#work-1{
+    grid-area: work-1;
+}
+#work-1:hover::after{
+    content: 'Web Project';
+}
+#work-2{
+    grid-area: work-2;
+}
+#work-2:hover::after{
+    content: 'Aplication Project';
+}
+#work-3{
+    grid-area: work-3;
+}
+#work-3:hover::after{
+    content: 'UI/UX Design';
+}
+
+@keyframes upDown {
+    0% {
         transform: translateY(0);
     }
-    50%{
-        transform: translateY(5px);
 
+    50% {
+        transform: translateY(10px);
     }
-    100%{
-        transform: 0;
+
+    100% {
+        transform: translateY(0);
     }
 }
